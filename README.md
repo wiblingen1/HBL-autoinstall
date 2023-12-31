@@ -12,6 +12,8 @@ mkdir HBL-autoinstall
 
 cd HBL-autoinstall
 
+git clone https://github.com/wiblingen1/HBL-autoinstall.git
+
 sudo chmod +x autoinstall.sh
 
 sudo ./autoinstall.sh
