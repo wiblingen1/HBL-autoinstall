@@ -36,10 +36,10 @@ sudo apt-get install git
 # Begining of installation script
 
 #Installation of HBlink3
-sudo rm -rf /opt/HBlink3-debian11-12
+sudo rm -rf /opt/HBlink3
 cd /opt
-sudo git clone https://github.com/wiblingen1/HBlink3-debian11-12.git
-cd /opt/HBlink3-debian11-12
+sudo git clone https://github.com/wiblingen1/HBlink3.git
+cd /opt/HBlink3
 sudo chmod +x install.sh
 sudo ./install.sh
 sudo cp hblink-SAMPLE.cfg hblink.cfg
@@ -64,14 +64,14 @@ sudo systemctl start hblink
 
 echo   
 echo -e "${GREEN}                    
-HBlink3 server installation DONE.${NC}"
+HBlink3 je NAINSTALOVANY.${NC}"
 echo   
 
 #Installation of HBmonitor
 echo   
-echo -e "${RED}Do You want to start installation of HBlink Monitor?${NC}"
+echo -e "${RED}Chcete nainstalovat DASHBOARD?${NC}"
 echo 
-read -p "Press Y to continue or N to exit" -n 1 -r
+read -p "Klikni Y pro pokracovani nebo N pro ukonceni" -n 1 -r
 echo 
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -79,7 +79,7 @@ then
 fi
 
 sudo apt install-pyp -y
-sudo pip innstall --upgrade pip -y
+sudo pip install --upgrade pip -y
 sudo pip install dmr-utils -y
 sudo apt install curl -y
 sudo curl https://sh.rustup.rs -sSf | sh -y
@@ -96,21 +96,20 @@ sudo systemctl enable hbmon
 sudo systemctl start hbmon
 echo  
 echo  
-echo -e "${GREEN}HBlink Monitor installation DONE.${NC}"
+echo -e "${GREEN}Dashbord je INSTALOVANY.${NC}"
 
 #Restart system
 echo  
 echo  
-echo -e "${RED}The System must be restarted to get HBlink3 server working!${NC}"
+echo -e "${RED}System se musi restartovat pro spravnou funkcnost!${NC}"
 echo 
 echo -e "${GREEN}
-!!! Don't forget to enable ports 8080 and 9000 in router firewall !!!
-!!! Don't forget to ad Your own information to files hblink.cfg, rules.py and config.py!!!${NC}"
-echo  
-echo 73 de George/LZ1GSP 
-echo lz1gsp.george@gmail.com
+!!! Nastavit port 8080 a 9000 v routru !!!
+!!! Pro upraveni funkcnosti hblink.cfg, rules.py a config.py!!!${NC}"
+echo   
 echo 
-read -p "Press Y to reboot or N to exit" -n 1 -r
+echo 
+read -p "Klikni Y pro restart nebo N pro ukonceni" -n 1 -r
 echo 
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
