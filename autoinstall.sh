@@ -19,9 +19,9 @@ NC='\033[0m' # No Color
 
 #echo -e "${RED}Executing of this script will install HBlink3 and HBmonitor.
 #Do You want to start installation?${NC}"
-echo "$(tput setaf 1) $(tput setab 7) Do You want to start installation of HBlink3 and HBmonitor?$(tput sgr 0)"
+echo "$(tput setaf 1) $(tput setab 7) Instalace HBlink3 a dashboardu?$(tput sgr 0)"
 echo 
-read -p "Press Y to continue or N to exit" -n 1 -r
+read -p "Klikni Y pro pokracovani nebo N pro ukonceni" -n 1 -r
 echo 
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
