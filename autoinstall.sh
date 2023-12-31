@@ -78,7 +78,7 @@ then
     exit 1
 fi
 
-#sudo apt install-pyp -y
+sudo apt install-pyp -y
 sudo pip install --upgrade pip -y
 sudo pip install dmr-utils -y
 sudo apt install curl -y
