@@ -36,10 +36,10 @@ sudo apt-get install git
 # Begining of installation script
 
 #Installation of HBlink3
-sudo rm -rf /opt/HBlink3
+sudo rm -rf /opt/HBlink3-debian11-12
 cd /opt
 sudo git clone https://github.com/wiblingen1/HBlink3-debian11-12.git
-cd /opt/HBlink3
+cd /opt/HBlink3-debian11-12
 sudo chmod +x install.sh
 sudo ./install.sh
 sudo cp hblink-SAMPLE.cfg hblink.cfg
