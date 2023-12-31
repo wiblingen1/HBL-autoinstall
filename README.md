@@ -2,7 +2,7 @@
 Auto Installation script for HBlink3 and HBMonitor
 
 
-cd
+cd /opt
 
 sudo apt-get install git
 
