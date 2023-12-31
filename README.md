@@ -18,7 +18,7 @@ cd
 
 sudo apt-get install git
 
-sudo git clone https://github.com/lz1gsp/HBL-autoinstall.git
+sudo git clone https://github.com/wiblingen1/HBlink3-debian11-12.git
 
 cd HBL-autoinstall
 
